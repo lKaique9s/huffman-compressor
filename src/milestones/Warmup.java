@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class warmup {
-    static void main() throws IOException {
+public class Warmup {
+    public static void main(String[] args) throws IOException {
         int number = 173;
         StringBuilder builder = new StringBuilder();
         for(int i = 7; i>= 0;i--){
