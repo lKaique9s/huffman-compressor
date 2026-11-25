@@ -44,4 +44,8 @@ public class Node implements Comparable<Node> {
         return orderCreated;
     }
 
+    public boolean isLeaf(){
+        return this.getLeftChild() == null && this.getRightChild() == null;
+    }
+
 }

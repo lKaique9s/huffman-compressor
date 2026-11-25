@@ -32,4 +32,23 @@ public class HuffmanTree {
         return this.root;
     }
 
+    public void printTree(Node node, int depth){
+        if(node == null)
+            return;
+        int aux = depth;
+        while(aux>0){
+            System.out.print("    ");
+            aux--;
+        }
+
+        if(node.isLeaf()){
+            System.out.println((char) node.getSymbol() + " | " + node.getFreq());
+        }else {
+            System.out.println(node.getFreq());
+        }
+
+        printTree(node.getLeftChild(),depth+1);
+        printTree(node.getRightChild(), depth+1);
+    }
+
 }
